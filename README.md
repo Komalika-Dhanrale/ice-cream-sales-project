@@ -2,55 +2,49 @@
 
 ## 1. Introduction
 
-### 🎯 Objective:
-To build a machine learning model that predicts ice cream profits based on temperature.
+### 🎯 Objective
+To build a simple machine learning model that predicts **Ice Cream Profit** based on the **Temperature**.
 
-### ❓ Problem Statement:
-Ice cream sales are influenced by temperature. The goal is to help businesses predict expected profits based on weather forecasts.
+### ❓ Problem Statement
+A business wants to understand how temperature affects ice cream sales. By analyzing the relationship between temperature and profit, the model can help forecast sales for different weather conditions.
 
-### 📂 Dataset Description:
-The dataset contains two columns:
-- `Temperature`: Temperature in Celsius
-- `Ice Cream Profits`: Profit in dollars
+### 📊 Dataset Description
+- **Filename**: `ice_cream_sales.csv`
+- **Columns**:
+  - `Temperature`: Temperature in Celsius
+  - `Ice Cream Profit`: Profit in dollars
 
 ---
 
 ## 2. Data Collection & Preprocessing
 
-### 📊 Data Source:
-The dataset (`ice_cream_sales.csv`) is locally stored.
-
-### 🔍 Preprocessing:
-- Checked for missing values
-- Converted data into input/output format for model training
+- ✅ Data Source: Local CSV file (`ice_cream_sales.csv`)
+- ✅ Simple and clean dataset, so no missing values or outliers
+- ✅ Split into input (X) and output (y)
 
 ---
 
 ## 3. Model Development
 
-### 🧠 Algorithm Used:
-- **Linear Regression** from `sklearn.linear_model`
-
-### 🛠️ Model Training Script:
-- The model was trained using `train_model.py`
-- The trained model is saved as `model/linear_model.pkl`
+- 🔧 Algorithm Used: **Simple Linear Regression**
+- 📁 Model File: `linear.pkl`
+- 🧠 The model learns the linear relationship between temperature and profit
 
 ---
 
 ## 4. Model Deployment
 
-### 🌐 Deployment Method:
-- Deployed using **Flask**
-- Routes:
-  - `/` → Home page (input form)
-  - `/predict` → Receives input and returns prediction result
+- 🚀 Deployment Method: **Flask API**
+- 📄 Main Script: `app.py`
+- 🖥️ Frontend: Simple HTML form (`templates/index.html`)
+- 🧠 Backend: Takes user input (temperature), loads model (`linear.pkl`), and returns predicted profit
 
 ---
 
-## 5. Steps to Run the Deployed Model
+## 5. Steps to Run the Project
 
-1. Clone the repository or download project files.
-2. Ensure required libraries are installed:
-   ```bash
-   pip install flask pandas scikit-learn
+1. Make sure you have Python installed
+2. Install required libraries:
 
+```bash
+pip install flask pandas scikit-learn
